@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basis CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thuộc tính flex-basis trong CSS</h1>
+        <p>
+            <strong>flex-basis</strong> xác định kích thước ban đầu của một flex item
+            trên trục chính của flex container.
+        </p>
+
+        <section>
+            <h2>1. flex-basis: 150px</h2>
+            <p>Giá trị độ dài xác định kích thước ban đầu của mỗi item.</p>
+            <div class="flex-box">
+                <div class="basis-150">Item 1</div>
+                <div class="basis-150">Item 2</div>
+                <div class="basis-150">Item 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. flex-basis: auto</h2>
+            <p>
+                Đây là giá trị mặc định. Kích thước item được xác định dựa trên
+                kích thước width hoặc nội dung của item.
+            </p>
+            <div class="flex-box">
+                <div class="basis-auto">Item có nội dung dài</div>
+                <div class="basis-auto">Item 2</div>
+                <div class="basis-auto">Item 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. flex-basis: initial</h2>
+            <p>Đặt thuộc tính về giá trị mặc định của nó.</p>
+            <div class="flex-box">
+                <div class="basis-initial">Item 1</div>
+                <div class="basis-initial">Item 2</div>
+                <div class="basis-initial">Item 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. flex-basis: inherit</h2>
+            <p>Item kế thừa giá trị flex-basis từ phần tử cha.</p>
+            <div class="flex-box parent">
+                <div class="basis-inherit">Item 1</div>
+                <div class="basis-inherit">Item 2</div>
+                <div class="basis-inherit">Item 3</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
