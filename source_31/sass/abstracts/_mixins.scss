@@ -1,0 +1,19 @@
+@mixin button-style($bg-color) {
+  background: $bg-color;
+  color: $white-color;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  &:hover {
+    filter: brightness(0.92);
+    transform: translateY(-2px);
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: $box-shadow;
+}
