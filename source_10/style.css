@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.container > p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-bottom: 8px;
+}
+
+section p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+.flex-container > div {
+    flex-basis: 100px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 1px solid #999;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.grow-item {
+    flex-grow: 1;
+    background-color: #cfcfcf;
+}
+
+small {
+    font-weight: normal;
+}
+
+.comparison .grow-1 {
+    flex-grow: 1;
+}
+
+.comparison .grow-2 {
+    flex-grow: 2;
+}
+
+.comparison .grow-3 {
+    flex-grow: 3;
+}
+
+.initial-item {
+    flex-grow: initial;
+}
+
+.parent {
+    flex-grow: 1;
+}
+
+.inherit-item {
+    flex-grow: inherit;
+}
