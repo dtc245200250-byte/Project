@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Columns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thuộc tính grid-template-columns</h1>
+
+        <p>
+            Thuộc tính <strong>grid-template-columns</strong> trong CSS
+            được sử dụng để đặt số lượng cột và kích thước của các cột
+            trong lưới. Số lượng cột được xác định bởi số lượng giá trị
+            được cung cấp cho thuộc tính này.
+        </p>
+
+        <h2>Cú pháp</h2>
+        <div class="syntax">
+            grid-template-columns: none | auto | max-content |
+            min-content | length | initial | inherit;
+        </div>
+
+        <h2>Các giá trị thuộc tính</h2>
+
+        <div class="values">
+            <div>
+                <h3>none</h3>
+                <p>Đây là giá trị mặc định, không xác định cột rõ ràng.</p>
+            </div>
+            <div>
+                <h3>length</h3>
+                <p>Đặt kích thước cột bằng px, em, rem, phần trăm,...</p>
+            </div>
+            <div>
+                <h3>auto</h3>
+                <p>Kích thước cột được trình duyệt tự động tính toán.</p>
+            </div>
+            <div>
+                <h3>min-content</h3>
+                <p>Kích thước cột dựa trên kích thước nội dung tối thiểu.</p>
+            </div>
+            <div>
+                <h3>max-content</h3>
+                <p>Kích thước cột dựa trên kích thước nội dung tối đa.</p>
+            </div>
+            <div>
+                <h3>initial</h3>
+                <p>Đưa thuộc tính về giá trị mặc định.</p>
+            </div>
+            <div>
+                <h3>inherit</h3>
+                <p>Kế thừa giá trị từ phần tử cha.</p>
+            </div>
+        </div>
+
+        <h2>Ví dụ 1</h2>
+        <p>Tạo 3 cột với kích thước lần lượt là 150px, 200px và 150px.</p>
+
+        <div class="grid example-1">
+            <div>Cột 1</div>
+            <div>Cột 2</div>
+            <div>Cột 3</div>
+        </div>
+
+        <div class="code">
+            grid-template-columns: 150px 200px 150px;
+        </div>
+
+        <h2>Ví dụ 2</h2>
+        <p>Chia không gian thành 3 cột theo tỷ lệ 1 : 2 : 1.</p>
+
+        <div class="grid example-2">
+            <div>Cột 1</div>
+            <div>Cột 2</div>
+            <div>Cột 3</div>
+        </div>
+
+        <div class="code">
+            grid-template-columns: 1fr 2fr 1fr;
+        </div>
+    </div>
+</body>
+</html>
