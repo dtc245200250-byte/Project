@@ -1,0 +1,35 @@
+.home-banner {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #eff6ff, #f8fafc);
+}
+
+.home-banner__content {
+    max-width: 760px;
+    padding: $spacing-xl 0;
+}
+
+.home-banner__eyebrow,
+.section__eyebrow {
+    margin-bottom: $spacing-xs;
+    color: $secondary-color;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.home-banner h1 {
+    margin-bottom: $spacing-sm;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.home-banner p {
+    max-width: 700px;
+    margin-bottom: $spacing-md;
+    font-size: 1.1rem;
+}
+
+.section {
+    padding: $spacing-xl 0;
+}
