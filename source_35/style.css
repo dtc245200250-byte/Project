@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+}
+
+.hero-section {
+    background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.12), transparent 36%),
+        linear-gradient(135deg, #f7fbff 0%, #ffffff 55%, #eef6ff 100%);
+}
+
+.py-lg-6 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.book-cover {
+    width: min(100%, 390px);
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 1.25rem;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.20);
+}
+
+.section-kicker {
+    display: inline-block;
+    margin-bottom: 0.65rem;
+    color: #2563eb;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.author-avatar {
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
+    border: 8px solid #ffffff;
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.12);
+}
+
+.section-intro {
+    max-width: 700px;
+}
+
+.feature-card,
+.pricing-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover,
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12) !important;
+}
+
+.feature-icon {
+    width: 58px;
+    height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 1.35rem;
+}
+
+.pricing-card-featured {
+    transform: translateY(-6px);
+}
+
+.download-banner {
+    box-shadow: 0 24px 55px rgba(15, 23, 42, 0.18);
+}
+
+@media (max-width: 991.98px) {
+    .py-lg-6 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .pricing-card-featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section h1 {
+        font-size: 2.6rem;
+    }
+
+    .book-cover {
+        width: 290px;
+    }
+
+    .author-avatar {
+        width: 180px;
+        height: 180px;
+    }
+}
