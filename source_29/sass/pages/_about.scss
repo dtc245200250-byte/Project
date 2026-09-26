@@ -1,0 +1,13 @@
+.about-section {
+    background: $light-color;
+}
+
+.section__heading {
+    max-width: 720px;
+    margin-bottom: $spacing-lg;
+}
+
+.section__heading h2 {
+    margin-bottom: $spacing-sm;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
