@@ -1,0 +1,24 @@
+.footer {
+    background: $dark-color;
+    color: $white-color;
+}
+
+.footer__content {
+    min-height: 80px;
+    @include flex-between;
+    gap: $spacing-sm;
+}
+
+.footer p {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+@include respond-mobile {
+    .footer__content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: $spacing-md 0;
+    }
+}
