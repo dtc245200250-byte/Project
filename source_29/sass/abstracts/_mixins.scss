@@ -1,0 +1,21 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin card-shadow {
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+@mixin respond-mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
