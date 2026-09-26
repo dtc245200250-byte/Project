@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thuộc tính flex-wrap trong CSS</h1>
+
+        <p>
+            Thuộc tính <strong>flex-wrap</strong> xác định các flex items được
+            đặt trên một dòng hay được bọc thành nhiều dòng khi không đủ không gian.
+        </p>
+
+        <section>
+            <h2>1. flex-wrap: nowrap</h2>
+            <p>Giá trị mặc định. Các flex items cố gắng nằm trên cùng một dòng.</p>
+            <div class="flex-box nowrap">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. flex-wrap: wrap</h2>
+            <p>Các flex items sẽ được bọc sang nhiều dòng khi không đủ chiều rộng.</p>
+            <div class="flex-box wrap">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. flex-wrap: wrap-reverse</h2>
+            <p>Các dòng flex items được bọc theo chiều ngược lại.</p>
+            <div class="flex-box wrap-reverse">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. flex-wrap: initial</h2>
+            <p>Đặt thuộc tính về giá trị mặc định của nó, tương đương với nowrap.</p>
+            <div class="flex-box initial">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
