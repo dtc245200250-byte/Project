@@ -1,0 +1,26 @@
+@mixin button-style($bg-color) {
+  background: $bg-color;
+  color: $white-color;
+  padding: $padding-standard;
+  border: 0;
+  border-radius: $button-radius;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.92);
+  }
+}
+
+@mixin box-style {
+  background: $white-color;
+  padding: $box-padding;
+  border-radius: $box-radius;
+  box-shadow: $box-shadow-default;
+}
