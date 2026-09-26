@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grow CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thuộc tính flex-grow trong CSS</h1>
+
+        <p>
+            <strong>flex-grow</strong> xác định khả năng một flex item phát triển
+            để chiếm phần không gian còn lại trong flex container so với các item khác.
+        </p>
+
+        <section>
+            <h2>Ví dụ: flex-grow: 1 trên Item 2</h2>
+            <p>
+                Vùng chứa có 5 div. Item 2 được đặt <strong>flex-grow: 1</strong>,
+                vì vậy Item 2 sẽ nhận phần không gian còn lại.
+            </p>
+
+            <div class="flex-container">
+                <div>Item 1</div>
+                <div class="grow-item">Item 2<br><small>flex-grow: 1</small></div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>So sánh nhiều giá trị flex-grow</h2>
+            <p>
+                Các item có giá trị flex-grow khác nhau sẽ chia phần không gian
+                còn lại theo tỷ lệ tương ứng.
+            </p>
+
+            <div class="flex-container comparison">
+                <div class="grow-1">Grow 1</div>
+                <div class="grow-2">Grow 2</div>
+                <div class="grow-3">Grow 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>flex-grow: initial</h2>
+            <p>
+                Giá trị initial đưa thuộc tính về giá trị mặc định là 0,
+                nghĩa là item không tự phát triển để chiếm phần không gian còn lại.
+            </p>
+
+            <div class="flex-container">
+                <div class="initial-item">Item 1</div>
+                <div class="initial-item">Item 2</div>
+                <div class="initial-item">Item 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>flex-grow: inherit</h2>
+            <p>
+                Giá trị inherit cho phép flex item kế thừa giá trị flex-grow
+                từ phần tử cha.
+            </p>
+
+            <div class="flex-container parent">
+                <div class="inherit-item">Item 1</div>
+                <div class="inherit-item">Item 2</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
