@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid - SASS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <section class="grid-section grid-section--header">
+      <div class="grid-content grid-content--purple"></div>
+    </section>
+
+    <section class="grid-section grid-section--content">
+      <div class="grid-content sidebar">
+        <div class="sidebar__item"></div>
+        <div class="sidebar__item"></div>
+        <div class="sidebar__item"></div>
+        <div class="sidebar__item"></div>
+      </div>
+
+      <div class="grid-content grid-content--empty"></div>
+      <div class="grid-content grid-content--empty"></div>
+      <div class="grid-content grid-content--empty"></div>
+      <div class="grid-content grid-content--empty"></div>
+      <div class="grid-content grid-content--empty"></div>
+      <div class="grid-content grid-content--empty"></div>
+
+      <div class="grid-content right-panel">
+        <div class="right-panel__item"></div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-section--footer">
+      <div class="grid-content grid-content--footer"></div>
+    </section>
+
+    <section class="grid-overlay" aria-hidden="true">
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+      <div class="grid-overlay__column"></div>
+    </section>
+  </div>
+
+  <p class="description">
+    Resize the browser window to see that this grid responds to resizing
+    and always uses 100% of the available space.
+  </p>
+</body>
+</html>
