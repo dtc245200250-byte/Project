@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký Người Dùng</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h1 class="text-center mb-2">Đăng Ký Người Dùng</h1>
+                        <p class="text-center text-muted mb-4">
+                            Vui lòng điền đầy đủ thông tin để tạo tài khoản.
+                        </p>
+
+                        <form>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="fullName"
+                                       placeholder="Nhập họ và tên" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email"
+                                       placeholder="name@example.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" id="password"
+                                       placeholder="Nhập mật khẩu" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                                <input type="password" class="form-control" id="confirmPassword"
+                                       placeholder="Nhập lại mật khẩu" required>
+                            </div>
+
+                            <fieldset class="mb-3">
+                                <legend class="fs-6 form-label">Giới tính</legend>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender"
+                                           id="male" value="male">
+                                    <label class="form-check-label" for="male">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender"
+                                           id="female" value="female">
+                                    <label class="form-check-label" for="female">Nữ</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender"
+                                           id="other" value="other">
+                                    <label class="form-check-label" for="other">Khác</label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="mb-3">
+                                <legend class="fs-6 form-label">Sở thích</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="reading" value="reading">
+                                    <label class="form-check-label" for="reading">Đọc sách</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="sports" value="sports">
+                                    <label class="form-check-label" for="sports">Thể thao</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="music" value="music">
+                                    <label class="form-check-label" for="music">Âm nhạc</label>
+                                </div>
+                            </fieldset>
+
+                            <div class="mb-4">
+                                <label for="country" class="form-label">Quốc gia</label>
+                                <select class="form-select" id="country" required>
+                                    <option value="" selected disabled>Chọn quốc gia</option>
+                                    <option value="vn">Việt Nam</option>
+                                    <option value="jp">Nhật Bản</option>
+                                    <option value="kr">Hàn Quốc</option>
+                                    <option value="us">Hoa Kỳ</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">
+                                    Đăng ký
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <p class="text-center text-muted mt-3 mb-0">
+                    Thông tin của bạn được sử dụng cho mục đích tạo tài khoản.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
