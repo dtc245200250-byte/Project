@@ -1,0 +1,120 @@
+body {
+    background: #f7f7f7;
+}
+
+.page-container {
+    background: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.site-header {
+    position: relative;
+    min-height: 180px;
+    background: linear-gradient(135deg, #173a6b, #2c78b8);
+    overflow: hidden;
+}
+
+.header-object {
+    height: 180px;
+    width: auto;
+    opacity: 0.9;
+}
+
+.shopping-mall {
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+    font-variant: small-caps;
+    color: #fff;
+}
+
+.shopping-mall > h1 {
+    font-family: Impact, sans-serif;
+    font-size: 50px;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px #000;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #ddd;
+    margin: 0;
+}
+
+.shopping-mall > h5 {
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+    color: #f0f0f0;
+}
+
+.poly-cart {
+    margin-top: 5px;
+}
+
+.poly-cart ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-variant: small-caps;
+}
+
+.poly-cart .panel-heading strong {
+    font-variant: small-caps;
+    font-size: larger;
+    text-shadow: 0 0 2px darkgray;
+}
+
+.poly-cart .panel-body {
+    overflow: hidden;
+}
+
+.poly-prod {
+    text-align: center;
+    padding: 5px;
+}
+
+.poly-prod .panel-body {
+    min-height: 165px;
+}
+
+.poly-prod .panel-body img {
+    height: 150px;
+    max-width: 95%;
+    width: auto;
+    object-fit: contain;
+}
+
+.poly-prod .panel-footer {
+    font-weight: 600;
+}
+
+.site-footer {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.site-footer p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .header-object {
+        display: none;
+    }
+
+    .shopping-mall {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        padding: 35px 20px;
+    }
+
+    .shopping-mall > h1 {
+        font-size: 38px;
+    }
+
+    .poly-cart .panel-body img,
+    .poly-cart .panel-body ul {
+        width: auto;
+    }
+}
