@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Row Gap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thuộc tính grid-row-gap</h1>
+
+        <p>
+            Thuộc tính <strong>grid-row-gap</strong> trong CSS được sử dụng
+            để xác định kích thước của khoảng cách giữa các hàng trong Grid.
+            Người dùng có thể chỉ định độ rộng của khoảng cách giữa các hàng
+            bằng cách cung cấp giá trị cho thuộc tính này.
+        </p>
+
+        <h2>Cú pháp</h2>
+        <div class="code">
+            grid-row-gap: length | percentage | global-values;
+        </div>
+
+        <h2>Các giá trị của thuộc tính</h2>
+
+        <section class="value">
+            <h3>length</h3>
+            <p>
+                Đặt khoảng cách giữa các hàng bằng một chiều dài cố định,
+                chẳng hạn như px, cm, em,...
+            </p>
+
+            <h3>Ví dụ</h3>
+            <div class="grid length-example">
+                <div>Hàng 1 - Cột 1</div>
+                <div>Hàng 1 - Cột 2</div>
+                <div>Hàng 2 - Cột 1</div>
+                <div>Hàng 2 - Cột 2</div>
+            </div>
+            <div class="code">grid-row-gap: 30px;</div>
+        </section>
+
+        <section class="value">
+            <h3>percentage (%)</h3>
+            <p>
+                Đặt khoảng cách giữa các hàng theo phần trăm.
+                Giá trị phần trăm được tính dựa trên kích thước phù hợp
+                của vùng chứa Grid.
+            </p>
+
+            <h3>Ví dụ</h3>
+            <div class="grid percentage-example">
+                <div>Hàng 1 - Cột 1</div>
+                <div>Hàng 1 - Cột 2</div>
+                <div>Hàng 2 - Cột 1</div>
+                <div>Hàng 2 - Cột 2</div>
+            </div>
+            <div class="code">grid-row-gap: 5%;</div>
+        </section>
+
+        <section class="value">
+            <h3>global-value</h3>
+            <p>
+                Có thể sử dụng các giá trị toàn cục như
+                <strong>initial</strong>, <strong>inherit</strong> và
+                <strong>unset</strong>.
+            </p>
+
+            <h3>Ví dụ</h3>
+            <div class="grid global-example">
+                <div>Hàng 1 - Cột 1</div>
+                <div>Hàng 1 - Cột 2</div>
+                <div>Hàng 2 - Cột 1</div>
+                <div>Hàng 2 - Cột 2</div>
+            </div>
+            <div class="code">grid-row-gap: initial;</div>
+        </section>
+    </div>
+</body>
+</html>
