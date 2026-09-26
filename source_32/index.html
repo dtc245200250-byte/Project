@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS Mixins &amp; Variables Demo</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <p class="hero__eyebrow">SASS OPTIMIZATION</p>
+            <h1>Mixins &amp; Variables</h1>
+            <p class="hero__description">
+                Giảm lặp code, kiểm soát giao diện bằng biến và tái sử dụng
+                các nhóm style bằng mixins.
+            </p>
+        </header>
+
+        <section class="section">
+            <div class="section-heading">
+                <h2>Typography</h2>
+                <p>Font size và màu chữ được kiểm soát bằng variables.</p>
+            </div>
+
+            <h1>Heading 1 - 32px</h1>
+            <h2>Heading 2 - 28px</h2>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <h2>Reusable Components</h2>
+                <p>Cùng một mixin có thể được dùng lại cho nhiều thành phần.</p>
+            </div>
+
+            <div class="button-group">
+                <a href="#" class="button button--primary">Primary Button</a>
+                <a href="#" class="button button--secondary">Secondary Button</a>
+                <a href="#" class="button button--dark">Dark Button</a>
+            </div>
+
+            <div class="card-grid">
+                <article class="card">
+                    <span class="card__label">01</span>
+                    <h3 class="card__title">Box Style</h3>
+                    <p>
+                        Card sử dụng mixin <code>box-style</code> để tái sử dụng
+                        background, padding, border-radius và box-shadow.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="card__label">02</span>
+                    <h3 class="card__title">Button Style</h3>
+                    <p>
+                        Button sử dụng mixin <code>button-style</code> với màu nền
+                        được truyền vào bằng tham số.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="card__label">03</span>
+                    <h3 class="card__title">Centralized Variables</h3>
+                    <p>
+                        Chỉ cần thay đổi variables để cập nhật màu sắc, kích thước
+                        và shadow cho toàn bộ giao diện.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section summary">
+            <h2>Kết quả mong đợi</h2>
+            <p>
+                CSS gọn gàng hơn, dễ quản lý hơn và có khả năng tái sử dụng cao.
+                Khi đổi màu hoặc kích thước, chỉ cần chỉnh ở file variables.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__content">
+            <p>&copy; 2026 SASS Mixins Demo</p>
+            <p>Variables • Mixins • Reusability</p>
+        </div>
+    </footer>
+</body>
+</html>
