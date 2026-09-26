@@ -1,0 +1,7 @@
+@function spacing($step) {
+    @return $step * 0.5rem;
+}
+
+@function to-rem($pixels) {
+    @return ($pixels / 16px) * 1rem;
+}
