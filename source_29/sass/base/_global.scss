@@ -1,0 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $white-color;
+}
+
+.container {
+    width: min(92%, $container-width);
+    margin-inline: auto;
+}
