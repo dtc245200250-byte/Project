@@ -1,0 +1,17 @@
+.card {
+    padding: $spacing-md;
+    background: $white-color;
+    border: 1px solid $border-color;
+    border-radius: $radius-md;
+    @include card-shadow;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.card h3 {
+    margin-bottom: $spacing-xs;
+}
