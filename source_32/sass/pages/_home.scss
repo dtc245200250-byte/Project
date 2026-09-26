@@ -1,0 +1,61 @@
+.hero {
+  margin: 45px 0 30px;
+  padding: 60px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fee2e2, #eff6ff);
+  @include box-style;
+
+  &__eyebrow {
+    margin-bottom: 8px;
+    color: $primary-color;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+  }
+
+  h1 {
+    margin-bottom: 12px;
+    font-size: clamp(38px, 6vw, 58px);
+    line-height: 1.05;
+  }
+
+  &__description {
+    max-width: 760px;
+    color: #64748b;
+    font-size: $font-small;
+  }
+}
+
+.section {
+  padding: 35px 0;
+}
+
+.section-heading {
+  margin-bottom: 24px;
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: #64748b;
+  }
+}
+
+.summary {
+  margin-top: 20px;
+  padding: 30px;
+  border-left: 5px solid $primary-color;
+  background: $white-color;
+  @include box-style;
+
+  h2 {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 35px 25px;
+  }
+}
