@@ -1,0 +1,33 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  @include box-style;
+  border: 1px solid $border-color;
+  transition: 0.25s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: $primary-color;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 800px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
