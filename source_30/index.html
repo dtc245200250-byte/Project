@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS CLI Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <a class="brand" href="#">SASS CLI</a>
+                <div class="nav-links">
+                    <a href="#about">Giới thiệu</a>
+                    <a href="#commands">Lệnh CLI</a>
+                    <a href="#workflow">Workflow</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <span class="eyebrow">SCSS → CSS</span>
+                <h1>Biên dịch SASS bằng Node.js và npm</h1>
+                <p>
+                    Demo cách tổ chức một dự án nhỏ để thực hành SASS CLI,
+                    biên dịch SCSS sang CSS và sử dụng watch mode.
+                </p>
+                <a class="button button--primary" href="#commands">Xem lệnh</a>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">MỤC TIÊU</span>
+                    <h2>Hiểu quy trình SASS cơ bản</h2>
+                    <p>
+                        Kiểm tra Node.js, cài Sass bằng npm, biên dịch SCSS
+                        và tự động cập nhật CSS khi mã nguồn thay đổi.
+                    </p>
+                </div>
+
+                <div class="cards">
+                    <article class="card">
+                        <div class="icon">01</div>
+                        <h3>Node.js &amp; npm</h3>
+                        <p>
+                            Kiểm tra <code>node -v</code> và <code>npm -v</code>
+                            trước khi cài Sass.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">02</div>
+                        <h3>SASS CLI</h3>
+                        <p>
+                            Sử dụng Sass CLI để chuyển đổi file SCSS thành file CSS.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon">03</div>
+                        <h3>Watch mode</h3>
+                        <p>
+                            Theo dõi thay đổi và tự động biên dịch CSS trong lúc phát triển.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--dark" id="commands">
+            <div class="container">
+                <div class="section-heading section-heading--light">
+                    <span class="eyebrow">SASS CLI</span>
+                    <h2>Các lệnh quan trọng</h2>
+                </div>
+
+                <div class="command-list">
+                    <div class="command">
+                        <span>Kiểm tra Node.js</span>
+                        <code>node -v</code>
+                    </div>
+                    <div class="command">
+                        <span>Kiểm tra npm</span>
+                        <code>npm -v</code>
+                    </div>
+                    <div class="command">
+                        <span>Cài Sass toàn cục</span>
+                        <code>npm install -g sass</code>
+                    </div>
+                    <div class="command">
+                        <span>Kiểm tra Sass</span>
+                        <code>sass -v</code>
+                    </div>
+                    <div class="command">
+                        <span>SCSS → CSS</span>
+                        <code>sass scss/styles.scss css/styles.css</code>
+                    </div>
+                    <div class="command">
+                        <span>Watch mode</span>
+                        <code>sass --watch scss/:css/</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="workflow">
+            <div class="container">
+                <div class="workflow">
+                    <div>
+                        <span class="eyebrow">WORKFLOW</span>
+                        <h2>Từ SCSS đến CSS</h2>
+                        <p>
+                            Viết mã trong thư mục <strong>scss/</strong>,
+                            biên dịch sang <strong>css/</strong> và liên kết file
+                            CSS đã tạo vào trang HTML.
+                        </p>
+                    </div>
+
+                    <div class="workflow-code">
+                        <code>scss/styles.scss</code>
+                        <span>↓</span>
+                        <code>SASS CLI</code>
+                        <span>↓</span>
+                        <code>css/styles.css</code>
+                        <span>↓</span>
+                        <code>index.html</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__content">
+            <p>&copy; 2026 SASS CLI Demo</p>
+            <p>Node.js • npm • Sass • SCSS</p>
+        </div>
+    </footer>
+</body>
+</html>
