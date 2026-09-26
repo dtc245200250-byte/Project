@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Row</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thuộc tính grid-row</h1>
+
+        <p>
+            Thuộc tính <strong>grid-row</strong> trong CSS được sử dụng
+            để chỉ định kích thước và vị trí của một phần tử trong bố cục Grid.
+            Đây là thuộc tính viết tắt của
+            <strong>grid-row-start</strong> và <strong>grid-row-end</strong>.
+        </p>
+
+        <h2>Cú pháp</h2>
+        <div class="code">
+            grid-row: grid-row-start | grid-row-end;
+        </div>
+
+        <h2>Các giá trị thuộc tính</h2>
+
+        <section class="value">
+            <h3>grid-row-start</h3>
+            <p>
+                Được sử dụng để chỉ định hàng bắt đầu hiển thị item.
+            </p>
+
+            <h3>Ví dụ</h3>
+            <div class="grid start-example">
+                <div class="item item-start">Item bắt đầu ở hàng 2</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+            </div>
+            <div class="code">grid-row-start: 2;</div>
+        </section>
+
+        <section class="value">
+            <h3>grid-row-end</h3>
+            <p>
+                Được sử dụng để chỉ định row-line mà tại đó item sẽ kết thúc
+                hoặc chỉ định số hàng mà một item sẽ kéo dài.
+            </p>
+
+            <h3>Ví dụ</h3>
+            <div class="grid end-example">
+                <div class="item item-end">Item kéo dài từ hàng 1 đến hàng 3</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+            </div>
+            <div class="code">grid-row-end: 3;</div>
+        </section>
+
+        <section class="value">
+            <h3>Kết hợp grid-row-start và grid-row-end</h3>
+            <p>
+                Thuộc tính <strong>grid-row</strong> có thể viết gọn bằng cách
+                kết hợp vị trí bắt đầu và kết thúc của item.
+            </p>
+
+            <h3>Ví dụ</h3>
+            <div class="grid shorthand-example">
+                <div class="item item-shorthand">Item chiếm hàng 1 và 2</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+            </div>
+            <div class="code">grid-row: 1 / 3;</div>
+        </section>
+    </div>
+</body>
+</html>
