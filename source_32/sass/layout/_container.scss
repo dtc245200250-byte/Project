@@ -1,0 +1,11 @@
+.container {
+  width: min(90%, 1120px);
+  margin: 0 auto;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
