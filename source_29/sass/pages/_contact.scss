@@ -1,0 +1,30 @@
+.contact-section {
+    background: $light-color;
+}
+
+.contact-panel {
+    padding: $spacing-lg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-md;
+    border-radius: $radius-lg;
+    background: $dark-color;
+}
+
+.contact-panel h2 {
+    margin-bottom: $spacing-xs;
+    color: $white-color;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-panel p {
+    color: #cbd5e1;
+}
+
+@include respond-mobile {
+    .contact-panel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
