@@ -1,0 +1,10 @@
+.theme-dark {
+    background: $dark-color;
+    color: $white-color;
+}
+
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3 {
+    color: $white-color;
+}
