@@ -1,0 +1,39 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(17, 24, 39, 0.96);
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.12);
+}
+
+.header__nav {
+    min-height: 72px;
+    @include flex-between;
+    gap: $spacing-md;
+}
+
+.header__logo {
+    color: $white-color;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.header__logo span {
+    color: $secondary-color;
+}
+
+.header__menu {
+    display: flex;
+    gap: $spacing-sm;
+    list-style: none;
+}
+
+.header__menu a {
+    color: $white-color;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-sm;
+}
+
+.header__menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
