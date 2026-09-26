@@ -1,0 +1,10 @@
+{
+  "name": "sass-cli-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo project for compiling SCSS to CSS with Sass CLI",
+  "scripts": {
+    "build": "sass scss/styles.scss css/styles.css",
+    "watch": "sass --watch scss/:css/"
+  }
+}
