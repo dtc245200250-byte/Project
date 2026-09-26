@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS to SASS Demo</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <div>
+                <p class="hero__eyebrow">SASS REFACTORING</p>
+                <h1>Chuyển CSS truyền thống sang SASS</h1>
+                <p class="hero__description">
+                    Ví dụ sử dụng variables, mixins, nesting và partials để tổ chức
+                    mã nguồn CSS gọn gàng, dễ bảo trì và tái sử dụng.
+                </p>
+            </div>
+        </header>
+
+        <section class="demo-section">
+            <div class="button-group">
+                <button class="button button--primary">Primary Button</button>
+                <button class="button button--secondary">Secondary Button</button>
+            </div>
+
+            <div class="card-grid">
+                <article class="card">
+                    <span class="card__label">01</span>
+                    <h2 class="card__title">Variables</h2>
+                    <p class="card__text">
+                        Màu sắc, border và box-shadow được khai báo một lần
+                        trong partial variables.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="card__label">02</span>
+                    <h2 class="card__title">Mixins</h2>
+                    <p class="card__text">
+                        Các nhóm CSS có thể tái sử dụng được gom vào mixins
+                        như button-style và box-shadow.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="card__label">03</span>
+                    <h2 class="card__title">Partials</h2>
+                    <p class="card__text">
+                        Code được chia thành base, layout và components,
+                        sau đó gộp lại bằng main.scss.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="summary">
+            <h2>Kết quả</h2>
+            <p>
+                Cấu trúc SASS giúp giảm lặp code, dễ chỉnh sửa và thuận tiện
+                mở rộng dự án khi giao diện lớn dần.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
