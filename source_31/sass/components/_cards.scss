@@ -1,0 +1,40 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid $border-color;
+  border-radius: $card-radius;
+  background: $white-color;
+  @include box-shadow;
+  transition: 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: $primary-color;
+    font-weight: 800;
+  }
+
+  &__title {
+    margin: 0 0 8px;
+  }
+
+  &__text {
+    margin: 0;
+    color: #64748b;
+  }
+}
+
+@media (max-width: 800px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
