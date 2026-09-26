@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS Architecture Demo</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <a class="header__logo" href="#">SASS<span>Demo</span></a>
+                <ul class="header__menu">
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home" class="home-page">
+        <section class="home-banner">
+            <div class="container">
+                <div class="home-banner__content">
+                    <p class="home-banner__eyebrow">SASS ARCHITECTURE</p>
+                    <h1>Tổ chức CSS chuyên nghiệp với SASS</h1>
+                    <p>
+                        Chia nhỏ mã nguồn thành biến, mixin, layout, component,
+                        page và theme để dự án dễ bảo trì và tái sử dụng.
+                    </p>
+                    <a class="button button--primary" href="#about">Khám phá</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section__heading">
+                    <p class="section__eyebrow">ABOUT</p>
+                    <h2>Cấu trúc rõ ràng, code dễ quản lý</h2>
+                    <p>
+                        Mỗi thư mục đảm nhiệm một trách nhiệm riêng, giúp bạn tìm,
+                        chỉnh sửa và tái sử dụng code nhanh hơn.
+                    </p>
+                </div>
+
+                <div class="grid">
+                    <article class="card">
+                        <h3>Abstracts</h3>
+                        <p>Chứa variables, mixins và functions dùng chung.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Base</h3>
+                        <p>Thiết lập reset, typography và quy tắc global.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Layout</h3>
+                        <p>Quản lý header, footer và hệ thống lưới của trang.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Components</h3>
+                        <p>Tách các UI nhỏ như button, card và form.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Pages</h3>
+                        <p>Chứa style riêng cho home, about và contact.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Themes</h3>
+                        <p>Định nghĩa giao diện sáng, tối và các biến thể màu.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="container contact-panel">
+                <div>
+                    <p class="section__eyebrow">CONTACT</p>
+                    <h2>Sẵn sàng áp dụng SASS?</h2>
+                    <p>Hãy bắt đầu bằng một cấu trúc thư mục rõ ràng ngay từ đầu dự án.</p>
+                </div>
+                <a class="button button--light" href="mailto:hello@example.com">Liên hệ</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__content">
+            <p>&copy; 2026 SASS Demo. All rights reserved.</p>
+            <p>• Variables • Mixins • Components • Themes</p>
+        </div>
+    </footer>
+</body>
+</html>
