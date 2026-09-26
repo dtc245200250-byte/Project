@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Column Start</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thuộc tính grid-column-start</h1>
+
+        <p>
+            Thuộc tính <strong>grid-column-start</strong> xác định
+            cột mà một grid item sẽ bắt đầu. Với các giá trị khác nhau,
+            người dùng có thể xác định vị trí bắt đầu của item trong lưới.
+        </p>
+
+        <h2>Cú pháp</h2>
+        <div class="code">
+            grid-column-start: auto | span n | column-line;
+        </div>
+
+        <h2>Các giá trị thuộc tính</h2>
+
+        <section class="value">
+            <h3>auto</h3>
+            <p>
+                Một từ khóa chỉ định rằng thuộc tính không đóng góp gì
+                vào vị trí của grid item. Item sẽ được đặt theo luồng
+                thông thường.
+            </p>
+
+            <h3>Ví dụ</h3>
+            <div class="grid auto-example">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+            </div>
+            <div class="code">grid-column-start: auto;</div>
+        </section>
+
+        <section class="value">
+            <h3>span n</h3>
+            <p>
+                Chỉ định số cột mà grid item sẽ kéo dài. Ví dụ,
+                <strong>span 2</strong> làm cho item kéo dài qua 2 cột.
+            </p>
+
+            <h3>Ví dụ</h3>
+            <div class="grid span-example">
+                <div class="item item-span">Item kéo dài 2 cột</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+            </div>
+            <div class="code">grid-column-start: span 2;</div>
+        </section>
+
+        <section class="value">
+            <h3>column-line</h3>
+            <p>
+                Chỉ định đường cột mà grid item sẽ bắt đầu hiển thị.
+                Trong ví dụ dưới đây, item bắt đầu từ đường cột số 2.
+            </p>
+
+            <h3>Ví dụ</h3>
+            <div class="grid line-example">
+                <div class="item item-line">Bắt đầu từ column-line 2</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+            </div>
+            <div class="code">grid-column-start: 2;</div>
+        </section>
+    </div>
+</body>
+</html>
