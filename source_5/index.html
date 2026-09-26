@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thuộc tính grid-gap</h1>
+
+        <p>
+            Thuộc tính <strong>grid-gap</strong> đặt kích thước của khoảng cách
+            giữa các hàng và cột trong bố cục Grid.
+        </p>
+
+        <p>
+            Đây là thuộc tính viết tắt cho hai thuộc tính
+            <strong>grid-row-gap</strong> và <strong>grid-column-gap</strong>.
+        </p>
+
+        <h2>Cú pháp</h2>
+        <div class="code">
+            grid-gap: grid-row-gap grid-column-gap;
+        </div>
+
+        <h2>Các giá trị thuộc tính</h2>
+
+        <div class="info">
+            <h3>grid-row-gap</h3>
+            <p>
+                Đặt kích thước khoảng cách giữa các hàng trong bố cục Grid.
+                Giá trị mặc định là <strong>0</strong>.
+            </p>
+
+            <h3>grid-column-gap</h3>
+            <p>
+                Đặt kích thước khoảng cách giữa các cột trong bố cục Grid.
+                Giá trị mặc định là <strong>0</strong>.
+            </p>
+        </div>
+
+        <h2>Ví dụ 1</h2>
+        <p>
+            Đặt khoảng cách giữa các hàng là 30px và giữa các cột là 15px.
+        </p>
+
+        <div class="grid example-1">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+        </div>
+
+        <div class="code">
+            grid-gap: 30px 15px;
+        </div>
+
+        <h2>Ví dụ 2</h2>
+        <p>
+            Đặt khoảng cách giữa cả hàng và cột đều là 25px.
+        </p>
+
+        <div class="grid example-2">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+        </div>
+
+        <div class="code">
+            grid-gap: 25px;
+        </div>
+    </div>
+</body>
+</html>
