@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Flow CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thuộc tính flex-flow trong CSS</h1>
+
+        <p>
+            <strong>flex-flow</strong> là thuộc tính viết tắt của
+            <strong>flex-direction</strong> và <strong>flex-wrap</strong>.
+        </p>
+
+        <section>
+            <h2>1. flex-flow: row nowrap</h2>
+            <p>Sắp xếp các item theo hàng từ trái sang phải và không bọc sang dòng mới.</p>
+            <div class="flex-container row-nowrap">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. flex-flow: row-reverse nowrap</h2>
+            <p>Sắp xếp các item theo hàng từ phải sang trái và không bọc sang dòng mới.</p>
+            <div class="flex-container row-reverse-nowrap">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. flex-flow: row wrap</h2>
+            <p>Sắp xếp theo hàng và cho phép các item bọc thành nhiều dòng.</p>
+            <div class="flex-container row-wrap">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+                <div>Item 6</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. flex-flow: row-reverse wrap</h2>
+            <p>Sắp xếp theo hàng ngược và cho phép các item bọc thành nhiều dòng.</p>
+            <div class="flex-container row-reverse-wrap">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+                <div>Item 6</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
