@@ -1,0 +1,28 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: $radius-sm;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.button--primary {
+    background: $primary-color;
+    color: $white-color;
+}
+
+.button--primary:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+}
+
+.button--light {
+    background: $white-color;
+    color: $dark-color;
+}
+
+.button--light:hover {
+    background: #e2e8f0;
+}
