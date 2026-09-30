@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Giản Lược</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-inner">
+            <h1>Tiêu đề Trang Web</h1>
+
+            <nav aria-label="Điều hướng chính">
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#services">Dịch vụ</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-container">
+
+        <aside class="sidebar left-sidebar">
+            <h3>Sidebar Trái</h3>
+            <ul>
+                <li>Mục 1</li>
+                <li>Mục 2</li>
+                <li>Mục 3</li>
+            </ul>
+        </aside>
+
+        <main class="main-content" id="home">
+            <section>
+                <span class="eyebrow">MAIN CONTENT</span>
+                <h2>Nội dung chính của trang</h2>
+                <p>
+                    Đây là khu vực chứa nội dung quan trọng nhất của trang web.
+                    Chúng ta sẽ đặt các bài viết, sản phẩm hoặc thông tin chi tiết tại đây.
+                </p>
+            </section>
+
+            <section id="about">
+                <h3>Giới thiệu</h3>
+                <p>
+                    Trang mẫu này minh họa cách kết hợp <strong>position: fixed</strong>
+                    cho header với <strong>Flexbox</strong> để tạo bố cục ba cột.
+                </p>
+                <p>
+                    Header vẫn giữ nguyên vị trí ở đầu màn hình khi người dùng cuộn trang.
+                    Hai sidebar nằm ở hai bên và khu vực nội dung chính chiếm phần không gian còn lại.
+                </p>
+            </section>
+
+            <section id="services">
+                <h3>Dịch vụ</h3>
+                <p>
+                    Nội dung dài được thêm vào để tạo đủ chiều cao cho trang và giúp kiểm tra
+                    hiệu quả của header cố định khi cuộn.
+                </p>
+                <p>
+                    Flexbox sử dụng <code>flex-grow: 1</code> cho nội dung chính để tự động
+                    mở rộng trong phần không gian còn lại giữa hai sidebar.
+                </p>
+            </section>
+
+            <section>
+                <h3>Nội dung thực hành</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, amet.
+                    Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem,
+                    neque, quidem. Voluptate, quia. Reiciendis, possimus. Quos, nemo.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore,
+                    quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum,
+                    amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos,
+                    nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.
+                </p>
+            </section>
+
+            <section id="contact">
+                <h3>Liên hệ</h3>
+                <p>
+                    Đây là phần cuối của nội dung chính. Khi cuộn trang, header vẫn cố định
+                    phía trên và không bị nội dung che khuất nhờ <code>z-index</code>.
+                </p>
+            </section>
+        </main>
+
+        <aside class="sidebar right-sidebar">
+            <h3>Sidebar Phải</h3>
+            <p>
+                Đây là một sidebar khác, có thể chứa quảng cáo, bài viết liên quan
+                hoặc các widget khác.
+            </p>
+
+            <div class="widget">
+                <strong>Widget</strong>
+                <span>Thông tin bổ sung</span>
+            </div>
+
+            <div class="widget">
+                <strong>Liên kết nhanh</strong>
+                <span>Tài nguyên hữu ích</span>
+            </div>
+        </aside>
+
+    </div>
+
+</body>
+</html>
