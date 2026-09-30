@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Dropdown Menu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f3f3f3;
+        }
+
+        #menu {
+            width: 100%;
+            min-height: 50px;
+            border-bottom: 1px solid #222;
+            background-color: #333;
+        }
+
+        #menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #menu > ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #menu li {
+            position: relative;
+            list-style: none;
+        }
+
+        #menu > ul > li {
+            width: 150px;
+        }
+
+        #menu a {
+            display: block;
+            width: 150px;
+            height: 50px;
+            padding: 0 16px;
+            color: white;
+            line-height: 50px;
+            text-decoration: none;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        #menu a:hover {
+            background-color: red;
+        }
+
+        /* Menu con */
+        #menu ul ul {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 150px;
+            visibility: hidden;
+            opacity: 0;
+            background-color: #333;
+            z-index: 1000;
+            transition: opacity 0.2s ease;
+        }
+
+        #menu ul ul li,
+        #menu ul ul a {
+            width: 150px;
+        }
+
+        /* Hiển thị menu con khi hover mục cha */
+        #menu li:hover > ul {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .content h1 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 700px) {
+            #menu > ul {
+                flex-direction: column;
+            }
+
+            #menu > ul > li,
+            #menu a {
+                width: 100%;
+            }
+
+            #menu ul ul {
+                top: 0;
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="menu" aria-label="Menu chính">
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#products">Products</a>
+                <ul>
+                    <li><a href="#laptop">Laptop</a></li>
+                    <li><a href="#phone">Điện thoại</a></li>
+                    <li><a href="#tablet">Máy tính bảng</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#services">Services</a>
+                <ul>
+                    <li><a href="#web">Web Design</a></li>
+                    <li><a href="#seo">SEO</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#news">News</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>Horizontal Dropdown Menu</h1>
+
+        <p>
+            Đây là menu dropdown ngang được xây dựng bằng HTML và CSS.
+            Menu chính hiển thị theo hàng ngang, còn menu con được ẩn mặc định.
+        </p>
+
+        <p>
+            Di chuột vào <strong>Products</strong> hoặc <strong>Services</strong>
+            để xem menu con xuất hiện bên dưới mục tương ứng.
+        </p>
+
+        <h2>Các thuộc tính chính</h2>
+        <ul>
+            <li><code>display: flex</code> giúp menu chính nằm ngang.</li>
+            <li><code>position: absolute</code> đặt menu con bên dưới menu cha.</li>
+            <li><code>visibility: hidden</code> ẩn menu con mặc định.</li>
+            <li><code>visibility: visible</code> khi hover để hiển thị menu con.</li>
+            <li><code>background-color: red</code> đổi màu liên kết khi rê chuột.</li>
+        </ul>
+    </main>
+
+</body>
+</html>
