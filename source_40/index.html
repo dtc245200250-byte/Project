@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website phim hoạt hình thực hành HTML CSS Video và YouTube iframe">
+    <title>KidsFlix - Phim Hoạt Hình</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="#home">
+                <span class="logo-mark">K</span>
+                <span>KidsFlix</span>
+            </a>
+
+            <nav class="head-link" aria-label="Điều hướng chính">
+                <a href="#home">Trang chủ</a>
+                <a href="#movies">Phim hoạt hình</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#contact">Liên hệ</a>
+            </nav>
+
+            <button class="menu-toggle" type="button" aria-label="Mở menu">☰</button>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div>
+                <span class="hero-badge">AN TOÀN • ĐƠN GIẢN • KHÔNG CHÈN QUẢNG CÁO TRÊN TRANG</span>
+                <h1>Thế giới phim hoạt hình cho bé</h1>
+                <p>
+                    Website mô phỏng theo yêu cầu bài tập: giao diện đơn giản,
+                    tìm kiếm nhanh, danh sách phim rõ ràng và trình phát video dễ sử dụng.
+                </p>
+            </div>
+        </section>
+
+        <section id="movies" class="movies-section">
+            <div class="toolbar">
+                <div>
+                    <h2>Kho phim hoạt hình</h2>
+                    <p class="muted">Chọn phim ở cột bên trái để phát ở khu vực bên phải.</p>
+                </div>
+
+                <div class="toolbar-actions">
+                    <label class="search-box">
+                        <span>⌕</span>
+                        <input id="searchInput" type="search" placeholder="Tìm phim theo tên..." aria-label="Tìm phim">
+                    </label>
+
+                    <label class="sort-box">
+                        <span>Sắp xếp:</span>
+                        <select id="sortSelect">
+                            <option value="newest">Mới cập nhật</option>
+                            <option value="views">Nhiều lượt xem</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <div class="content-layout">
+                <aside class="left-content">
+                    <div class="panel-header">
+                        <h3>Danh sách phim</h3>
+                        <span id="movieCount" class="count-badge">6</span>
+                    </div>
+
+                    <div id="movieList" class="movie-list"></div>
+                </aside>
+
+                <section class="right-content" aria-label="Khu vực phát video">
+                    <div class="player-card">
+                        <div class="player-heading">
+                            <div>
+                                <span class="section-label">ĐANG PHÁT</span>
+                                <h3 id="playerTitle">Doraemon - Tập mở đầu</h3>
+                            </div>
+                            <span id="qualityBadge" class="quality-badge">HD 720p</span>
+                        </div>
+
+                        <div class="video-wrap">
+                            <video
+                                id="mainVideo"
+                                controls
+                                preload="metadata"
+                                poster="https://images.unsplash.com/photo-1541560052-5e137f229371?auto=format&fit=crop&w=1200&q=80">
+                                <source
+                                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                                    type="video/mp4">
+                                Trình duyệt của bạn không hỗ trợ thẻ video.
+                            </video>
+                        </div>
+
+                        <div class="player-info">
+                            <p id="playerDescription">
+                                Video mẫu dùng để minh họa khu vực phát phim bằng thẻ <code>&lt;video&gt;</code>.
+                                Bạn có thể thay đường dẫn bằng video hoạt hình của riêng mình.
+                            </p>
+                            <div class="meta-row">
+                                <span id="playerViews">12.4K lượt xem</span>
+                                <span id="playerUpdated">Cập nhật hôm nay</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="youtube-card">
+                        <div class="player-heading">
+                            <div>
+                                <span class="section-label">VIDEO YOUTUBE</span>
+                                <h3>Video tham khảo</h3>
+                            </div>
+                        </div>
+
+                        <div class="iframe-wrap">
+                            <iframe
+                                id="youtubeFrame"
+                                src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                                title="Video hoạt hình tham khảo trên YouTube"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section id="about" class="info-section">
+            <div class="info-card">
+                <span class="section-label">MỤC TIÊU BÀI TẬP</span>
+                <h2>Layout bằng div + Video + YouTube iframe</h2>
+                <div class="info-grid">
+                    <article>
+                        <strong>01</strong>
+                        <h3>Nội dung phù hợp</h3>
+                        <p>Giao diện được thiết kế theo hướng chuyên biệt cho phim hoạt hình và nội dung gia đình.</p>
+                    </article>
+                    <article>
+                        <strong>02</strong>
+                        <h3>Tìm kiếm & sắp xếp</h3>
+                        <p>Có thể tìm phim theo tên và sắp xếp theo mới cập nhật hoặc lượt xem.</p>
+                    </article>
+                    <article>
+                        <strong>03</strong>
+                        <h3>Responsive</h3>
+                        <p>Bố cục tự động chuyển từ hai cột sang một cột trên tablet và điện thoại.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <strong>KidsFlix</strong>
+                <p>Website thực hành HTML, CSS, Video và iframe.</p>
+            </div>
+            <div>
+                <span>© 2026 KidsFlix Practice</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
