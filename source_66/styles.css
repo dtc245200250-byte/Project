@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f1ea;
+    color: #2f2a24;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+    width: min(960px, 92%);
+    margin: 0 auto;
+    padding: 28px 0 48px;
+}
+
+.hero {
+    text-align: center;
+}
+
+.story-cover {
+    display: block;
+    width: min(100%, 820px);
+    margin: 0 auto 22px;
+    border-radius: 14px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
+h1 {
+    margin: 10px 0 8px;
+    color: #6d3f2b;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 2.7rem;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    margin: 0 auto 28px;
+    color: #6c6259;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.toc {
+    margin: 28px auto 36px;
+    padding: 22px;
+    border: 1px solid #c7b7a5;
+    border-radius: 12px;
+    background-color: #fffaf2;
+    box-shadow: 0 8px 18px rgba(73, 56, 42, 0.08);
+}
+
+.toc h2 {
+    margin-top: 0;
+    color: #6d3f2b;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.toc h5 {
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.toc a {
+    display: block;
+    padding: 10px 12px;
+    color: #4e342e;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.toc a:hover {
+    color: #9c4d23;
+    background-color: #f1dfca;
+    text-decoration: underline;
+}
+
+.story section {
+    scroll-margin-top: 20px;
+    margin-bottom: 34px;
+    padding: 24px 26px;
+    background-color: #fffdf9;
+    border-left: 4px solid #b97745;
+    border-radius: 0 10px 10px 0;
+}
+
+.story h3 {
+    margin-top: 0;
+    color: #70452f;
+    font-family: Arial, sans-serif;
+    font-size: 1.45rem;
+}
+
+.story p {
+    margin: 0 0 16px;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.story p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    margin-top: 12px;
+    color: #7c6f64;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .page {
+        width: min(94%, 960px);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .story section {
+        padding: 20px 18px;
+    }
+
+    .story p {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+}
