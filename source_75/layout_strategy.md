@@ -1,0 +1,3 @@
+# Layout Strategy
+
+MetricsHub phân chia công cụ theo bản chất của layout. **CSS Grid** phù hợp với cấu trúc tổng thể 2 chiều của Dashboard vì có thể kiểm soát đồng thời hàng và cột, đồng thời cho widget lớn dùng `grid-column: span 2` và `grid-row: span 2`. **Flexbox** phù hợp với Component 1 chiều như Navbar: các mục tự co giãn, căn chỉnh và wrap theo lượng nội dung thực tế thay vì bị khóa bằng kích thước cứng. **Bootstrap Grid** được dùng cho Pricing vì đây là bố cục 3 cột chuẩn, cần triển khai nhanh và responsive với `col-12 col-md-4`. Ba kỹ thuật có thể kết hợp: Grid lo bố cục Dashboard, Flexbox lo các thành phần bên trong widget, còn Bootstrap xử lý Pricing.
