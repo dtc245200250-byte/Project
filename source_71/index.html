@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook UI - Fixed Header & Sidebar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">facebook</div>
+    <div class="search">
+        <input type="text" placeholder="Tìm kiếm trên Facebook">
+    </div>
+    <nav class="top-actions">
+        <a href="#">Trang chủ</a>
+        <a href="#">Bạn bè</a>
+        <a href="#">Thông báo</a>
+        <a href="#">Tài khoản</a>
+    </nav>
+</header>
+
+<div class="layout">
+    <aside class="sidebar left-sidebar">
+        <h3>Lối tắt</h3>
+        <a href="#">👤 Trang cá nhân</a>
+        <a href="#">👥 Bạn bè</a>
+        <a href="#">📰 Bảng tin</a>
+        <a href="#">👨‍👩‍👧 Nhóm</a>
+        <a href="#">📅 Sự kiện</a>
+        <a href="#">💾 Đã lưu</a>
+    </aside>
+
+    <main class="main-content">
+        <section class="composer card">
+            <div class="composer-row">
+                <div class="avatar">A</div>
+                <input type="text" placeholder="Ambrose, bạn đang nghĩ gì?">
+            </div>
+            <div class="composer-actions">
+                <button>🎥 Video trực tiếp</button>
+                <button>🖼️ Ảnh/video</button>
+                <button>😊 Cảm xúc</button>
+            </div>
+        </section>
+
+        <article class="post card">
+            <div class="post-header">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>Ambrose</strong>
+                    <span>10 phút · 🌍</span>
+                </div>
+            </div>
+            <p class="post-text">
+                Hôm nay mình đang luyện tập HTML và CSS. Mục tiêu là xây dựng một giao diện
+                có fixed header, sidebar và phần nội dung chính rõ ràng, dễ sử dụng.
+            </p>
+            <div class="post-image">
+                <div class="image-label">Bài thực hành CSS</div>
+            </div>
+            <div class="post-stats">
+                <span>👍 128</span>
+                <span>24 bình luận · 8 lượt chia sẻ</span>
+            </div>
+            <div class="post-actions">
+                <button>👍 Thích</button>
+                <button>💬 Bình luận</button>
+                <button>↗ Chia sẻ</button>
+            </div>
+        </article>
+
+        <article class="post card">
+            <div class="post-header">
+                <div class="avatar blue">C</div>
+                <div>
+                    <strong>CodeGym Study Group</strong>
+                    <span>1 giờ · 🌍</span>
+                </div>
+            </div>
+            <p class="post-text">
+                Chúc mọi người hoàn thành bài thực hành và nhớ kiểm tra responsive trên cả
+                màn hình máy tính và điện thoại.
+            </p>
+            <div class="post-actions">
+                <button>👍 Thích</button>
+                <button>💬 Bình luận</button>
+                <button>↗ Chia sẻ</button>
+            </div>
+        </article>
+    </main>
+
+    <aside class="sidebar right-sidebar">
+        <h3>Người liên hệ</h3>
+        <a href="#"><span class="online"></span> Minh Anh</a>
+        <a href="#"><span class="online"></span> Hoàng Nam</a>
+        <a href="#"><span class="online"></span> Lan Chi</a>
+        <a href="#"><span class="online"></span> Đức Minh</a>
+
+        <h3 class="section-title">Được tài trợ</h3>
+        <div class="sponsor">
+            <strong>Học CSS hiệu quả</strong>
+            <p>Thực hành mỗi ngày để nâng cao kỹ năng frontend.</p>
+        </div>
+    </aside>
+</div>
+
+</body>
+</html>
