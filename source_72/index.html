@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic DIV & CSS Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="main">
+    <div id="head">
+        <div class="logo">CODE<span>GYM</span></div>
+        <div class="banner">Học lập trình - Xây dựng tương lai</div>
+    </div>
+
+    <div id="head-link">
+        <a href="#">Home</a>
+        <a href="#">Students</a>
+        <a href="#">Course</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="layout">
+        <div id="left">
+            <h3>Menu</h3>
+            <a href="#">HTML & CSS</a>
+            <a href="#">JavaScript</a>
+            <a href="#">Java</a>
+            <a href="#">Database</a>
+            <a href="#">Spring Boot</a>
+        </div>
+
+        <div id="content">
+            <div class="content-card highlight">
+                <h2>Hot News</h2>
+                <p>
+                    Luyện tập HTML và CSS giúp bạn xây dựng nền tảng vững chắc
+                    trước khi bước vào các công nghệ web nâng cao.
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h2>Photo Slide</h2>
+                <div class="photo-slide">
+                    <div class="photo-badge">WEB DEVELOPMENT</div>
+                </div>
+            </div>
+
+            <div class="news-grid">
+                <article class="content-card">
+                    <h2>News 1</h2>
+                    <p>
+                        Làm quen với Flexbox, Grid và Responsive Design để tạo
+                        giao diện hiển thị tốt trên nhiều kích thước màn hình.
+                    </p>
+                </article>
+
+                <article class="content-card">
+                    <h2>News 2</h2>
+                    <p>
+                        Sử dụng DIV kết hợp CSS để chia trang thành từng khu vực
+                        rõ ràng, dễ bảo trì và mở rộng.
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <div id="right">
+            <div class="side-card">
+                <h3>Calendar</h3>
+                <div class="calendar">
+                    <div>MON</div>
+                    <div>TUE</div>
+                    <div>WED</div>
+                    <div>THU</div>
+                    <div>FRI</div>
+                    <div>SAT</div>
+                    <div>SUN</div>
+                    <span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                    <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+                    <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
+                    <span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                    <span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+                </div>
+            </div>
+
+            <div class="side-card">
+                <h3>Chart</h3>
+                <div class="chart">
+                    <div class="bar bar-1"></div>
+                    <div class="bar bar-2"></div>
+                    <div class="bar bar-3"></div>
+                    <div class="bar bar-4"></div>
+                    <div class="bar bar-5"></div>
+                </div>
+            </div>
+
+            <div class="side-card">
+                <h3>Map</h3>
+                <div class="map">
+                    <span class="pin">●</span>
+                    <span class="road road-1"></span>
+                    <span class="road road-2"></span>
+                    <span class="road road-3"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div>© 2026 CodeGym Layout Practice</div>
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Support</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
