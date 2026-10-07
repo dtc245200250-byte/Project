@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Hành Trình Của Gió</title>
+  <desc id="desc">Minh đứng trên ngọn đồi nhìn về thung lũng trong ánh chiều.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9e7ef"/>
+      <stop offset="65%" stop-color="#f7d4a8"/>
+      <stop offset="100%" stop-color="#e7a56f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="520" fill="url(#sky)"/>
+  <circle cx="940" cy="135" r="62" fill="#fff2c2" opacity="0.9"/>
+  <path d="M0 395 C160 320 270 340 420 410 C580 490 735 320 905 365 C1060 406 1130 330 1200 300 L1200 520 L0 520 Z" fill="#78966b"/>
+  <path d="M0 445 C190 370 300 390 455 445 C610 500 780 390 930 424 C1080 458 1140 405 1200 390 L1200 520 L0 520 Z" fill="#4f6f55"/>
+  <path d="M0 0 C210 82 330 50 470 100 C650 165 780 110 930 55 C1040 15 1125 28 1200 70" fill="none" stroke="#ffffff" stroke-width="7" opacity="0.5"/>
+  <path d="M80 210 C250 165 350 205 475 170" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity="0.55"/>
+  <path d="M710 245 C805 215 875 230 965 204" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+  <circle cx="530" cy="355" r="15" fill="#2f3b31"/>
+  <path d="M520 370 L505 430 L555 430 L540 370 Z" fill="#384b3b"/>
+  <path d="M508 430 L493 475 M553 430 L566 476" stroke="#2f3b31" stroke-width="8" stroke-linecap="round"/>
+  <path d="M520 392 L486 415 M542 392 L574 410" stroke="#2f3b31" stroke-width="8" stroke-linecap="round"/>
+  <text x="600" y="420" font-family="Georgia, serif" font-size="48" fill="#ffffff" font-weight="700">Hành Trình Của Gió</text>
+</svg>
