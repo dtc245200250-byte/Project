@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidToon - Phim hoạt hình</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <span class="logo-mark">K</span>
+        <span>KidToon</span>
+    </div>
+
+    <nav class="nav">
+        <a class="active" href="#">Trang chủ</a>
+        <a href="#">Mới cập nhật</a>
+        <a href="#">Xem nhiều</a>
+        <a href="#">Thể loại</a>
+    </nav>
+
+    <div class="search-box">
+        <input id="searchInput" type="search" placeholder="Tìm tên phim..." aria-label="Tìm tên phim">
+    </div>
+</header>
+
+<div class="page">
+    <aside class="left-content">
+        <div class="panel-title">
+            <h2>Danh sách phim</h2>
+            <span id="movieCount">5 phim</span>
+        </div>
+
+        <div id="movieList" class="movie-list">
+            <button class="movie-item active" type="button"
+                    data-type="html5"
+                    data-title="Big Buck Bunny"
+                    data-source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+                <span class="thumb thumb-1">01</span>
+                <span class="movie-info">
+                    <strong>Big Buck Bunny</strong>
+                    <small>HTML5 Video · HD</small>
+                </span>
+            </button>
+
+            <button class="movie-item" type="button"
+                    data-type="youtube"
+                    data-title="Animated Story Demo"
+                    data-source="aqz-KE-bpKQ">
+                <span class="thumb thumb-2">02</span>
+                <span class="movie-info">
+                    <strong>Animated Story Demo</strong>
+                    <small>YouTube · Full HD</small>
+                </span>
+            </button>
+
+            <button class="movie-item" type="button"
+                    data-type="html5"
+                    data-title="Animation Demo 02"
+                    data-source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
+                <span class="thumb thumb-3">03</span>
+                <span class="movie-info">
+                    <strong>Animation Demo 02</strong>
+                    <small>HTML5 Video · HD</small>
+                </span>
+            </button>
+
+            <button class="movie-item" type="button"
+                    data-type="html5"
+                    data-title="Animation Demo 03"
+                    data-source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4">
+                <span class="thumb thumb-4">04</span>
+                <span class="movie-info">
+                    <strong>Animation Demo 03</strong>
+                    <small>HTML5 Video · HD</small>
+                </span>
+            </button>
+
+            <button class="movie-item" type="button"
+                    data-type="html5"
+                    data-title="Animation Demo 04"
+                    data-source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">
+                <span class="thumb thumb-5">05</span>
+                <span class="movie-info">
+                    <strong>Animation Demo 04</strong>
+                    <small>HTML5 Video · HD</small>
+                </span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="right-content">
+        <section class="player-card">
+            <div class="player-header">
+                <div>
+                    <p class="eyebrow">Đang phát</p>
+                    <h1 id="playerTitle">Big Buck Bunny</h1>
+                </div>
+                <span class="quality">HD</span>
+            </div>
+
+            <div class="player">
+                <video id="html5Player" controls preload="metadata"
+                       src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+
+                <iframe
+                    id="youtubePlayer"
+                    title="YouTube video player"
+                    src=""
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+                <div id="emptyPlayer" class="empty-player">
+                    <span>▶</span>
+                    <p>Chọn một bộ phim trong danh sách để bắt đầu xem.</p>
+                </div>
+            </div>
+
+            <div class="player-meta">
+                <span>🎬 Audio / Phụ đề Việt</span>
+                <span>📺 720p - 1080p</span>
+                <span>🚫 Không quảng cáo</span>
+            </div>
+        </section>
+
+        <section class="description-card">
+            <h2>Giới thiệu</h2>
+            <p>
+                KidToon là giao diện mô phỏng một website xem hoạt hình dành cho trẻ em,
+                tập trung vào bố cục đơn giản, dễ xem và không gây xao nhãng. Danh sách phim
+                có thể lọc nhanh theo tên và trình phát hỗ trợ cả HTML5 <code>&lt;video&gt;</code>
+                lẫn YouTube <code>&lt;iframe&gt;</code>.
+            </p>
+        </section>
+    </main>
+</div>
+
+<footer class="footer">
+    <p>© 2026 KidToon · Website học HTML/CSS</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
