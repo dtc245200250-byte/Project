@@ -16,11 +16,6 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet(name = "DiscountServlet", urlPatterns = "/display-discount")
 public class DiscountServlet extends HttpServlet {
 
-    private static final NumberFormat CURRENCY_FORMAT =
-            NumberFormat.getCurrencyInstance(Locale.US);
-    private static final NumberFormat NUMBER_FORMAT =
-            NumberFormat.getNumberInstance(Locale.US);
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -59,10 +54,13 @@ public class DiscountServlet extends HttpServlet {
                     .subtract(discountAmount)
                     .setScale(2, RoundingMode.HALF_UP);
 
-            CURRENCY_FORMAT.setMinimumFractionDigits(2);
-            CURRENCY_FORMAT.setMaximumFractionDigits(2);
-            NUMBER_FORMAT.setMinimumFractionDigits(0);
-            NUMBER_FORMAT.setMaximumFractionDigits(2);
+            NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.US);
+            currencyFormat.setMinimumFractionDigits(2);
+            currencyFormat.setMaximumFractionDigits(2);
+
+            NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);
+            numberFormat.setMinimumFractionDigits(0);
+            numberFormat.setMaximumFractionDigits(2);
 
             try (PrintWriter out = response.getWriter()) {
                 out.println("<!DOCTYPE html>");
@@ -86,13 +84,13 @@ public class DiscountServlet extends HttpServlet {
                 out.println("<div class=\"row\"><span class=\"label\">Product Description</span><span class=\"value\">"
                         + escapeHtml(description.trim()) + "</span></div>");
                 out.println("<div class=\"row\"><span class=\"label\">List Price</span><span class=\"value\">"
-                        + CURRENCY_FORMAT.format(listPrice) + "</span></div>");
+                        + currencyFormat.format(listPrice) + "</span></div>");
                 out.println("<div class=\"row\"><span class=\"label\">Discount Percent</span><span class=\"value\">"
-                        + NUMBER_FORMAT.format(discountPercent) + "%</span></div>");
+                        + numberFormat.format(discountPercent) + "%</span></div>");
                 out.println("<div class=\"row\"><span class=\"label\">Discount Amount</span><span class=\"value discount\">−"
-                        + CURRENCY_FORMAT.format(discountAmount) + "</span></div>");
+                        + currencyFormat.format(discountAmount) + "</span></div>");
                 out.println("<section class=\"final\"><span class=\"label\">Discount Price</span><div class=\"price\">"
-                        + CURRENCY_FORMAT.format(discountPrice) + "</div></section>");
+                        + currencyFormat.format(discountPrice) + "</div></section>");
                 out.println("<a class=\"back\" href=\"" + request.getContextPath()
                         + "/index.jsp\">Calculate another product</a>");
                 out.println("</main></body></html>");
