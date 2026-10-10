@@ -64,7 +64,7 @@ public class UserServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/users");
         } catch (SQLException ex) {
             throw new ServletException("Unable to save user changes. Check the database connection.", ex);
-        } catch (NumberFormatException | IllegalArgumentException ex) {
+        } catch (IllegalArgumentException ex) {
             request.setAttribute("errorMessage", "Dữ liệu nhập vào không hợp lệ. Vui lòng kiểm tra lại.");
             if ("edit".equals(action)) {
                 try {
