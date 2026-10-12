@@ -17,4 +17,7 @@ public interface IUserDAO {
 
     /** Inserts a user using the insert_user stored procedure. */
     void insertUserStore(User user) throws SQLException;
+
+    /** Inserts a user and assigns permissions atomically in one JDBC transaction. */
+    void addUserTransaction(User user, int[] permissionIds) throws SQLException;
 }
