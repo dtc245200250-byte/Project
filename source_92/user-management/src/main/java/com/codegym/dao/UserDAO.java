@@ -142,6 +142,67 @@ public class UserDAO implements IUserDAO {
         }
     }
 
+
+    /**
+     * Inserts a user and all selected permissions atomically.
+     * If any permission assignment fails, the user insert is rolled back too.
+     */
+    @Override
+    public void addUserTransaction(User user, int[] permissionIds) throws SQLException {
+        String insertUserSql = "INSERT INTO users(name, email, country) VALUES (?, ?, ?)";
+        String insertPermissionSql =
+                "INSERT INTO user_permission(user_id, permission_id) VALUES (?, ?)";
+
+        try (Connection connection = getConnection()) {
+            boolean originalAutoCommit = connection.getAutoCommit();
+            connection.setAutoCommit(false);
+
+            try {
+                int userId;
+                try (PreparedStatement userStatement = connection.prepareStatement(
+                        insertUserSql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
+                    userStatement.setString(1, user.getName());
+                    userStatement.setString(2, user.getEmail());
+                    userStatement.setString(3, user.getCountry());
+                    userStatement.executeUpdate();
+
+                    try (ResultSet keys = userStatement.getGeneratedKeys()) {
+                        if (!keys.next()) {
+                            throw new SQLException("Could not retrieve generated user ID.");
+                        }
+                        userId = keys.getInt(1);
+                    }
+                }
+
+                if (permissionIds != null && permissionIds.length > 0) {
+                    try (PreparedStatement permissionStatement =
+                                 connection.prepareStatement(insertPermissionSql)) {
+                        for (int permissionId : permissionIds) {
+                            permissionStatement.setInt(1, userId);
+                            permissionStatement.setInt(2, permissionId);
+                            permissionStatement.executeUpdate();
+                        }
+                    }
+                }
+
+                connection.commit();
+            } catch (SQLException | RuntimeException exception) {
+                try {
+                    connection.rollback();
+                } catch (SQLException rollbackException) {
+                    exception.addSuppressed(rollbackException);
+                }
+                throw exception;
+            } finally {
+                try {
+                    connection.setAutoCommit(originalAutoCommit);
+                } catch (SQLException resetException) {
+                    // Closing the connection below still releases the JDBC resource.
+                }
+            }
+        }
+    }
+
     private User mapUser(ResultSet result) throws SQLException {
         return new User(
                 result.getInt("id"),
