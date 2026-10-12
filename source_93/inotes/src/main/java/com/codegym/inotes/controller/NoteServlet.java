@@ -31,6 +31,7 @@ public class NoteServlet extends HttpServlet {
                 case "create" -> showForm(request, response, "/note/create.jsp");
                 case "view" -> showExistingNote(request, response, management, "/note/view.jsp");
                 case "edit" -> showExistingNote(request, response, management, "/note/edit.jsp");
+                case "delete" -> showExistingNote(request, response, management, "/note/delete.jsp");
                 default -> {
                     String keyword = value(request.getParameter("q"), "");
                     request.setAttribute("keyword", keyword);
