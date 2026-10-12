@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #172033;
+  background: #f4f7fb;
+}
+
+.page-header {
+  padding: 48px 20px 12px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #5265d8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.subtitle {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.product-card {
+  flex: 1 1 calc(25% - 20px);
+  min-width: 220px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(29, 45, 80, 0.1);
+}
+
+.product-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.icon-blue {
+  color: #2457c5;
+  background: #e7efff;
+}
+
+.icon-purple {
+  color: #7042bd;
+  background: #f0e8ff;
+}
+
+.icon-orange {
+  color: #b75a17;
+  background: #fff0df;
+}
+
+.icon-green {
+  color: #177a59;
+  background: #ddf8ec;
+}
+
+.product-card h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.description {
+  min-height: 48px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.price {
+  margin: 20px 0;
+  color: #263db5;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.product-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid #edf0f5;
+  color: #3347b7;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.product-link:hover {
+  color: #172b87;
+}
+
+.page-footer {
+  padding: 20px;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .product-card {
+    flex-basis: 100%;
+  }
+
+  .page-header {
+    padding-top: 32px;
+  }
+}
