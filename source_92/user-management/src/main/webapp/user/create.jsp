@@ -14,7 +14,7 @@ label{display:block;margin:16px 0 7px;font-size:14px;font-weight:700}input{width
 </style></head>
 <body><main class="card">
 <p class="eyebrow">User directory</p><h1>Thêm User mới</h1>
-<p class="hint">Khi lưu biểu mẫu, ứng dụng gọi Stored Procedure <code>insert_user</code> thông qua CallableStatement.</p>
+<p class="hint">Khi lưu biểu mẫu, ứng dụng thêm User và các quyền đã chọn trong cùng một JDBC Transaction.</p>
 <form action="${pageContext.request.contextPath}/users?action=create" method="post">
 <label for="name">Tên</label><input id="name" name="name" maxlength="120" required>
 <label for="email">Email</label><input id="email" name="email" type="email" maxlength="220" required>
