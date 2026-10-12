@@ -2,7 +2,7 @@
 
 Bài thực hành Java Web quản lý User theo mô hình MVC, sử dụng JSP/Servlet, MySQL và JDBC. Các chức năng gồm Stored Procedures qua `CallableStatement` và JDBC Transaction để thêm User cùng các quyền trong một giao dịch nguyên tử:
 - Lấy User theo ID bằng `get_user_by_id` khi mở trang sửa.
-- Thêm User bằng `insert_user` khi gửi form thêm mới (giữ lại để đối chiếu với bài Stored Procedure trước).\n- Thêm User cùng nhiều quyền bằng `addUserTransaction`: `setAutoCommit(false)`, lấy ID bằng `RETURN_GENERATED_KEYS`, thêm các dòng `user_permission`, rồi `commit()`; lỗi SQL sẽ gọi `rollback()`.
+- Giữ phương thức `insertUserStore()` để đối chiếu với bài Stored Procedure trước; form tạo User hiện gọi `addUserTransaction()` để lưu User và quyền cùng lúc.\n- Thêm User cùng nhiều quyền bằng `addUserTransaction`: `setAutoCommit(false)`, lấy ID bằng `RETURN_GENERATED_KEYS`, thêm các dòng `user_permission`, rồi `commit()`; lỗi SQL sẽ gọi `rollback()`.
 
 Các chức năng khác vẫn được giữ lại: danh sách, sửa, xóa, tìm theo country và sắp xếp theo name.
 
