@@ -55,8 +55,9 @@ public class UserServlet extends HttpServlet {
             switch (action == null ? "" : action) {
                 case "create" -> {
                     User newUser = readUser(request, false);
-                    // Exercise requirement: insertion is executed by a stored procedure.
-                    userDAO.insertUserStore(newUser);
+                    int[] permissionIds = readPermissionIds(request);
+                    // User and permission assignments must succeed or fail together.
+                    userDAO.addUserTransaction(newUser, permissionIds);
                 }
                 case "edit" -> {
                     User editedUser = readUser(request, true);
@@ -128,6 +129,23 @@ public class UserServlet extends HttpServlet {
             return new User(parseId(request), name, email, country);
         }
         return new User(name, email, country);
+    }
+
+
+    private int[] readPermissionIds(HttpServletRequest request) {
+        String[] values = request.getParameterValues("permissions");
+        if (values == null || values.length == 0) {
+            return new int[0];
+        }
+
+        int[] ids = new int[values.length];
+        for (int i = 0; i < values.length; i++) {
+            ids[i] = Integer.parseInt(values[i]);
+            if (ids[i] < 1 || ids[i] > 4) {
+                throw new IllegalArgumentException("Invalid permission ID");
+            }
+        }
+        return ids;
     }
 
     private int parseId(HttpServletRequest request) {
