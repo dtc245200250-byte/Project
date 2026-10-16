@@ -1,0 +1,56 @@
+/* Reset — Mobile First */
+*,*::before,*::after{box-sizing:border-box}
+:root{--ink:#20231f;--muted:#73786f;--paper:#f6f6f1;--surface:#fff;--line:#e3e5dc;--accent:#d6fb69;--radius:1.1rem}
+html{scroll-behavior:smooth;font-size:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;font-size:1rem;line-height:1.6}
+img{display:block;width:100%;max-width:100%;height:auto}a{color:inherit;text-decoration:none}
+.page-container{width:100%;margin-inline:auto;padding:0 1.1rem}
+.site-header{min-height:5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-size:.75rem;font-weight:700;letter-spacing:.12em}
+.brand-mark{display:grid;width:2.3rem;aspect-ratio:1;place-items:center;border-radius:50%;background:var(--accent);font:700 1.05rem "Space Grotesk",sans-serif;letter-spacing:-.08em}
+.main-nav{display:flex;align-items:center;gap:.8rem;font-size:.78rem;font-weight:600}.main-nav>a:not(.nav-contact){display:none}
+.nav-contact{padding:.65rem .85rem;border:1px solid var(--line);border-radius:99rem;white-space:nowrap}
+.intro{padding:4.5rem 0 3.5rem}.eyebrow{margin:0;color:var(--muted);font-size:.7rem;font-weight:700;letter-spacing:.13em}
+.status-dot{display:inline-block;width:.48rem;height:.48rem;margin-right:.35rem;border-radius:50%;background:#7caa32;vertical-align:.02rem}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif;letter-spacing:-.055em}h1,h2,h3,p{margin-top:0}
+.intro h1{max-width:58rem;margin:1.2rem 0 1.5rem;font-size:clamp(2.7rem,12vw,4.5rem);line-height:.99}
+.intro h1 span,.closing h2 span,.section-title h2 span{color:#8aa83d}
+.intro-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:1.1rem}.intro-bottom p{max-width:34rem;margin-bottom:0;color:var(--muted);font-size:1rem}
+.text-link{display:inline-flex;align-items:center;gap:.65rem;padding-bottom:.25rem;border-bottom:1px solid var(--ink);font-size:.85rem;font-weight:700}
+.projects-section{padding:2rem 0 4.5rem}.section-title{display:flex;flex-direction:column;align-items:flex-start;gap:.7rem;margin-bottom:1.5rem}
+.section-title h2{margin:.3rem 0 0;font-size:clamp(1.8rem,7vw,2.8rem);line-height:1.1}.section-note{max-width:22rem;margin-bottom:0;color:var(--muted);font-size:.9rem}
+.content-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem}
+.card{min-width:0;overflow:hidden;padding:.65rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.card-image{position:relative;display:block;overflow:hidden;aspect-ratio:4/3;border-radius:.7rem;background:#e8e9e1}
+.card-image img,.card-image picture{width:100%;height:100%}.card-image img{object-fit:cover;transition:transform 350ms ease}.card:hover .card-image img{transform:scale(1.045)}
+.image-arrow{position:absolute;right:.7rem;bottom:.7rem;display:grid;width:2.25rem;aspect-ratio:1;place-items:center;border-radius:50%;background:var(--accent);font-size:1.1rem}
+.card-info{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem;padding:1rem .25rem 0}
+.card-category{margin-bottom:.3rem;color:var(--muted);font-size:.62rem;font-weight:700;letter-spacing:.09em}.card h3{margin-bottom:0;font-size:1.25rem;line-height:1.2}
+.card-year{padding-top:.1rem;color:var(--muted);font-size:.72rem}.card-description{margin:.65rem .25rem .4rem;color:var(--muted);font-size:.85rem}
+.closing{display:flex;flex-direction:column;align-items:flex-start;gap:1.1rem;margin:0 0 3rem;padding:2rem 1.3rem;border-radius:1.25rem;background:#e9eddf}
+.closing h2{margin:0;font-size:clamp(2.1rem,8vw,3.4rem);line-height:1.02}
+.contact-button{display:inline-flex;align-items:center;gap:1.5rem;padding:.85rem 1.1rem;border-radius:99rem;background:var(--ink);color:#fff;font-size:.85rem;font-weight:700}
+.site-footer{display:flex;flex-direction:column;align-items:flex-start;gap:.9rem;padding:1.4rem 0 1.8rem;border-top:1px solid var(--line)}
+.site-footer p{margin:0;color:var(--muted);font-size:.75rem}.back-top{font-size:.78rem;font-weight:700}
+/* Tablet */
+@media(min-width:768px){
+.page-container{padding-inline:2rem}.site-header{min-height:5.5rem}.main-nav{gap:1.5rem;font-size:.85rem}.main-nav>a:not(.nav-contact){display:inline}.nav-contact{padding:.7rem 1rem}
+.intro{padding:6.5rem 0 5rem}.intro h1{margin-top:1.5rem;font-size:clamp(4.5rem,8vw,6.5rem)}
+.intro-bottom{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:2rem}.intro-bottom p{font-size:1.05rem}
+.projects-section{padding-bottom:6rem}.section-title{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:2rem}
+.content-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}.card-featured{grid-column:span 2}.card-featured .card-image{aspect-ratio:16/8}.card-tall .card-image{aspect-ratio:4/4.5}
+.closing{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:4rem;padding:3rem}
+.site-footer{flex-direction:row;align-items:center;justify-content:space-between;gap:1rem}
+}
+/* Desktop — asymmetric four-column mosaic */
+@media(min-width:1024px){
+.page-container{max-width:90rem;padding-inline:3.5rem}.intro{padding:8rem 0 6rem}.intro h1{font-size:clamp(5.5rem,8vw,8rem)}
+.intro-bottom p{max-width:38rem}.section-title h2{font-size:3.2rem}
+.content-grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:12rem;gap:1.25rem}
+.card-featured{grid-column:span 2;grid-row:span 2}.card-featured .card-image{aspect-ratio:auto;height:19rem}
+.card-tall{grid-column:span 1;grid-row:span 2}.card-tall .card-image{height:19rem;aspect-ratio:auto}
+.card-wide{grid-column:span 2;grid-row:span 2}.card-wide .card-image{height:19rem;aspect-ratio:auto}
+.card-small{grid-column:span 2;grid-row:span 2}.card-small .card-image{height:19rem;aspect-ratio:auto}
+.card h3{font-size:1.4rem}.closing{margin-top:2rem;padding:4rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
